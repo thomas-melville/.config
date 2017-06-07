@@ -1,0 +1,19 @@
+[user]
+	email = thomas.melville@ericsson.com
+	name = Thomas Melville
+[alias]
+	st = status
+	draft = push origin HEAD:refs/drafts/master
+	rsh = reset --hard
+	pull = pull --rebase
+	rshom = reset --hard origin/master
+	update = commit --amend --no-edit
+        rebafcom = "!f() { git update && git fetch && git rebase origin/master; }; f"
+        stash-all = "!f() { git stash save --include-untracked $1; }; f"
+	review = "!f() { if [ -z $1 ]; then git push origin HEAD:refs/for/master; else git push origin HEAD:refs/for/master%topic=$1; fi; }; f"
+[core]
+	editor = vim
+	autocrlf = input
+	excludesfile = /home/ethomev/.gitignore
+[push]
+	default = matching
