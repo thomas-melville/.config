@@ -3,13 +3,23 @@
 	name = Thomas Melville
 [alias]
 	st = status
+	# push a commit as a draft to gerrit
 	draft = push origin HEAD:refs/drafts/master
+	# reset HEAD to the latest on the local master
 	rsh = reset --hard
+	# pull the latest changes from origin and rebase onto the local master instead of the default, which is merge onto the local master
 	pull = pull --rebase
+	# reset HEAD to the latest on origin master
 	rshom = reset --hard origin/master
+	# add the currently staged files to the commit at HEAD
 	update = commit --amend --no-edit
+	# Discovered this feature a while ago, it's possible to call bash functions in git aliases
+	# add the currently stage files to the commit at HEAD and rebase the branch with origin master
         rebafcom = "!f() { git update && git fetch && git rebase origin/master; }; f"
+	# stash all changes, tracked and untracked, and give the stash a name which is the first argument to the command
         stash-all = "!f() { git stash save --include-untracked $1; }; f"
+	# push a commit as a review to gerrit. This function also allows you to set the topic. topics are handy if you have multiple commits for a story, and even handier if those commits are across repos.
+	# If an argument is passed to the command it is the topic name, if no argument is passed no topic is set. If pushing a new patch set on a review which already has a topic there is no need to pass the topic everytime
 	review = "!f() { if [ -z $1 ]; then git push origin HEAD:refs/for/master; else git push origin HEAD:refs/for/master%topic=$1; fi; }; f"
 [core]
 	editor = vim
