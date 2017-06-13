@@ -22,6 +22,14 @@ MY_SCRIPTS=/home/ethomev/Work/gitrepos/myScripts/
 PATH=$PATH:$MY_SCRIPTS
 JBOSS_HOME=/home/ethomev/Work/Software/wildfly-11.0.0.Alpha1/
 
+# GO Setup
+## execute go from anywhere
+GO_HOME=/usr/local/go/bin
+PATH=$PATH:$GO_HOME
+## execute compiled go commands from anywhere
+GOPATH=$(go env GOPATH)
+PATH=$PATH:$GOPATH/bin
+
 # Alias for Firefox esr
 alias firefox_esr=/home/ethomev/Work/Software/firefox/firefox &
 
