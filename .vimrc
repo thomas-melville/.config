@@ -1,3 +1,6 @@
+" I need to settle on a colour scheme
+" colorscheme
+
 " syntax highlighting
 syntax enable 
 
@@ -19,4 +22,5 @@ set expandtab
 " show line numbers
 set number
 
-
+" set my own key to move to command mode
+inoremap jj <esc>
