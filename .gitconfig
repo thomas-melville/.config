@@ -21,6 +21,12 @@
 	# push a commit as a review to gerrit. This function also allows you to set the topic. topics are handy if you have multiple commits for a story, and even handier if those commits are across repos.
 	# If an argument is passed to the command it is the topic name, if no argument is passed no topic is set. If pushing a new patch set on a review which already has a topic there is no need to pass the topic everytime
 	review = "!f() { if [ -z $1 ]; then git push origin HEAD:refs/for/master; else git push origin HEAD:refs/for/master%topic=$1; fi; }; f"
+	#short git log
+    le = log --oneline --decorate
+	#List commits showing changed files
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	#List oneline commits showing dates
+    lds = log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
 [core]
 	editor = vim
 	autocrlf = input
