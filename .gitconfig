@@ -7,8 +7,6 @@
 	draft = push origin HEAD:refs/drafts/master
 	# reset HEAD to the latest on the local master
 	rsh = reset --hard
-	# pull the latest changes from origin and rebase onto the local master instead of the default, which is merge onto the local master
-	pull = pull --rebase
 	# reset HEAD to the latest on origin master
 	rshom = reset --hard origin/master
 	# add the currently staged files to the commit at HEAD
@@ -33,3 +31,12 @@
 	excludesfile = /home/ethomev/.configuration/.gitignore
 [push]
 	default = matching
+[rerere]
+    # This means I don't have to do git add when resolving conflicts in a rebase
+    autoUpdate = true
+[pull]
+    # Configure pull to do a rebase instead of a merge
+    rebase = true
+[rebase]
+    # give more information when you do a rebase. This is apparently costly, turn it off if it annoys me
+    stat = true
