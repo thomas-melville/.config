@@ -71,3 +71,8 @@ tmp/
 *.dll
 *.exe
 
+# Vagrant folder
+.vagrant
+
+# Ansible
+*.retry
