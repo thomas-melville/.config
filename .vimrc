@@ -23,4 +23,4 @@ set expandtab
 set number
 
 " set my own key to move to command mode
-inoremap jj <esc>
+inoremap rty <esc>
