@@ -28,7 +28,8 @@
 [core]
 	editor = vim
 	autocrlf = input
-	excludesfile = /home/ethomev/.configuration/.gitignore
+    # I don't think this is needed if the file is in the same directory and named ignore
+    #excludesfile = .gitignore
 [push]
 	default = matching
 [rerere]
