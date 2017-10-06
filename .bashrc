@@ -24,14 +24,11 @@ JBOSS_HOME=/home/ethomev/Work/Software/wildfly-11.0.0.Alpha1/
 
 # GO Setup
 ## execute go from anywhere
-GO_HOME=/usr/local/go/bin
-PATH=$PATH:$GO_HOME
+#GO_HOME=/usr/local/go/bin
+#PATH=$PATH:$GO_HOME
 ## execute compiled go commands from anywhere
-GOPATH=$(go env GOPATH)
-PATH=$PATH:$GOPATH/bin
-
-# Alias for Firefox esr
-alias firefox_esr=/home/ethomev/Work/Software/firefox/firefox &
+#GOPATH=$(go env GOPATH)
+#PATH=$PATH:$GOPATH/bin
 
 # This file updates the prompt when in a git repo
 PATH_TO_GIT_COMPLETION=/home/ethomev/Work/gitrepos/git/contrib/completion
@@ -40,3 +37,9 @@ export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 
 # allow moving forward in interactive search
 stty -ixon
+
+# Alias for idea
+alias idea='/opt/idea-IC-172.4343.14/bin/idea.sh &'
+
+# Change default shell
+exec fish
