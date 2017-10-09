@@ -326,3 +326,8 @@ set fish_color_search_match --background=49483E # the color used to highlight hi
 set fish_color_operator FD971F # AE81FF # the color for parameter expansion operators like '*' and '~'
 set fish_color_escape 66D9EF # the color used to highlight character escapes like '\n' and '\x70'
 set fish_color_cwd 66D9EF # the color used for the current working directory in the default prompt
+
+#My additions
+# Alias for idea
+alias idea='/opt/idea-IC-172.4343.14/bin/idea.sh &'
+alias spring='/opt/spring-1.5.7.RELEASE/bin/spring'
