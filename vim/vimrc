@@ -1,3 +1,6 @@
+" configure vim to look in the bundles folder
+set runtimepath^=~/.vim/bundle/vim-gitgutter
+
 " I need to settle on a colour scheme
 " colorscheme
 
@@ -27,3 +30,7 @@ inoremap rty <esc>
 
 " Automatically correct common typing mistakes I make
 abbr ther the
+
+" configuration for git changes plugin
+set updatetime=250
+
