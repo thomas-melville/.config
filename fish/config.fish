@@ -102,10 +102,6 @@ alias df='df -h'
 alias du='du -ch'
 alias free='free -m'
 
-# Ask password when working with docker https://www.projectatomic.io/blog/2015/08/why-we-dont-let-non-root-users-run-docker-in-centos-fedora-or-rhel/
-alias docker='sudo docker'
-alias docker-compose='sudo docker-compose'
-
 alias ...='cd ../..'
 
 alias git-show-unpushed-commits='git cherry -v' 
