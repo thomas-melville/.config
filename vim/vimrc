@@ -35,3 +35,13 @@ abbr ther the
 " configuration for git changes plugin
 set updatetime=250
 
+" Turn off the arrows keys in normal  and insert mode to force me to use h,j,k,l
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Rigth> <Nop>
+
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
