@@ -325,5 +325,5 @@ set fish_color_cwd 66D9EF # the color used for the current working directory in 
 
 #My additions
 # Alias for idea
-alias idea='/opt/idea-IC-172.4343.14/bin/idea.sh &'
+alias idea='/opt/idea-IC-173.3727.127/bin/idea.sh &'
 alias spring='/opt/spring-1.5.8.RELEASE/bin/spring'
