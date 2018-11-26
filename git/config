@@ -1,6 +1,8 @@
 [user]
 	email = thomas.melville@ericsson.com
 	name = Thomas Melville
+[url "ssh://gerrit/OSS/com.ericsson.orchestration.mgmt"]
+    insteadOf = orch:
 [alias]
 	st = status
 	# push a commit as a draft to gerrit

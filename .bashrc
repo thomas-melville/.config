@@ -16,7 +16,7 @@ function marks {
 # Additions to Classpath
 NODE_HOME=/home/ethomev/Masters/Thesis/node-v5.9.1-linux-x64/
 PATH=$PATH:$NODE_HOME/bin
-JAVA_HOME=/usr/lib/jvm/jdk1.8.0_74/bin/
+JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 PATH=$PATH:$JAVA_HOME
 MY_SCRIPTS=/home/ethomev/Work/gitrepos/myScripts/
 PATH=$PATH:$MY_SCRIPTS
@@ -39,8 +39,10 @@ export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 stty -ixon
 
 # Alias for idea
-alias idea='/opt/idea-IC-173.3727.127/bin/idea.sh &'
+alias idea='/opt/idea-IC-181.4203.550/bin/idea.sh &'
 alias spring='/opt/spring-1.5.8.RELEASE/bin/spring'
+
+DOCKER_CERT_PATH=/etc/docker/certs.d/
 
 # Change default shell
 exec fish

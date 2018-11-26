@@ -26,7 +26,7 @@ set expandtab
 set number
 
 " set my own key to move to command mode
-inoremap rty <esc>
+inoremap qqq <esc>
 inoremap <esc> <Nopt
 
 " Automatically correct common typing mistakes I make

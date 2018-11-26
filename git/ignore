@@ -39,6 +39,17 @@ pom.xml.versionsBackup
 pom.xml.next
 release.properties
 
+# Python build files
+build
+*.egg*
+*.pyc
+.coverage
+.tox
+.cache/
+*.spec
+dist/
+.pytest_cache/
+
 # ARQ tests
 arq-perf
 
