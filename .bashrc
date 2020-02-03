@@ -1,12 +1,12 @@
 # JUMP Utility
 export MARKPATH=$HOME/.marks
-function jump { 
+function jump {
     cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
 }
-function mark { 
+function mark {
     mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
 }
-function unmark { 
+function unmark {
     rm -i "$MARKPATH/$1"
 }
 function marks {
@@ -31,6 +31,8 @@ JBOSS_HOME=/home/ethomev/Work/Software/wildfly-11.0.0.Alpha1/
 #GOPATH=$(go env GOPATH)
 #PATH=$PATH:$GOPATH/bin
 
+export PATH="/home/ethomev/.linuxbrew/bin:$PATH"
+
 # This file updates the prompt when in a git repo
 PATH_TO_GIT_COMPLETION=/home/ethomev/Work/gitrepos/git/contrib/completion
 [[ -f "$PATH_TO_GIT_COMPLETION/.git_prompt.sh" ]] && source "$PATH_TO_GIT_COMPLETION/.git_prompt.sh"
@@ -39,11 +41,8 @@ export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 # allow moving forward in interactive search
 stty -ixon
 
-# Alias for idea
-alias idea='/opt/idea-IC-181.4203.550/bin/idea.sh &'
-alias spring='/opt/spring-1.5.8.RELEASE/bin/spring'
-
 DOCKER_CERT_PATH=/etc/docker/certs.d/
-
+source <(kubectl completion bash)
+source <(helm completion bash)
 # Change default shell
 exec fish

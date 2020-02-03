@@ -325,4 +325,4 @@ set fish_color_cwd 66D9EF # the color used for the current working directory in 
 
 #My additions
 # Alias for idea
-alias idea='/opt/idea-IC-181.4203.550/bin/idea.sh &'
+alias idea='/opt/idea-IC-183.4284.148/bin/idea.sh &'
