@@ -14,14 +14,15 @@ function marks {
 }
 
 # Additions to Classpath
-NODE_HOME=/home/ethomev/Masters/Thesis/node-v5.9.1-linux-x64/
-PATH=$PATH:$NODE_HOME/bin
+#JAVA_HOME=/usr/lib/jvm/java-15-oracle/
 #JAVA_HOME=/usr/lib/jvm/java-11-oracle/
 JAVA_HOME=/usr/lib/jvm/java-8-oracle/
+#JAVA_HOME=/usr/lib/jvm/java-17-oracle/
 PATH=$PATH:$JAVA_HOME
 MY_SCRIPTS=/home/ethomev/Work/gitrepos/myScripts/
 PATH=$PATH:$MY_SCRIPTS
-JBOSS_HOME=/home/ethomev/Work/Software/wildfly-11.0.0.Alpha1/
+GO_HOME=/usr/local/go/bin
+PATH=$PATH:$GO_HOME
 
 # GO Setup
 ## execute go from anywhere

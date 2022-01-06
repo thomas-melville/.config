@@ -19,16 +19,16 @@
 function fish_user_key_bindings
 	  # Clear input on Ctrl+U
     bind \cu 'commandline "";'
-    
+
     if type -q fzf # Use fzf if installed
-      # Simulate Ctrl+R in Bash      
+      # Simulate Ctrl+R in Bash
       bind \cr fzf-history-widget
 
       # Fuzzy recursive search files in current directory & append selection to current command
       bind \cf search
-      
+
       bind \ce rangr
-      
+
       bind \e\cf search-contents
     else # Use poor man completion (as up arrow, without search-as-you-type)
       echo "⚠ fzf is not installed. To greatly improve Ctrl+R, Ctrl+E, Ctrl+Alt+F and Ctrl+F type `update-fzf`"
@@ -51,7 +51,7 @@ function fish_prompt
     set_color 777 --bold
 
     set __git_branch (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
-    
+
     # Full path + git trimmed to width of terminal
     set prompt_width (math (pwd | string length) + (string length "$__git_branch") + 7)
     if test $prompt_width -gt $COLUMNS
@@ -59,8 +59,8 @@ function fish_prompt
     else
       echo -n [(pwd)"❯ "
     end
-    
-    # Git stuff    
+
+    # Git stuff
     if [ $__git_branch!="" ]
         set_color A6E22E
         echo -n '⌥'$__git_branch
@@ -70,7 +70,7 @@ function fish_prompt
             echo -n " ⬆$__git_unpushed_commits "
         end
     end
-    
+
     echo
     echo (set_color 777)'➤ '
 end
@@ -104,7 +104,7 @@ alias free='free -m'
 
 alias ...='cd ../..'
 
-alias git-show-unpushed-commits='git cherry -v' 
+alias git-show-unpushed-commits='git cherry -v'
 
 function mkcd --description "Create and cd to directory"
   mkdir $argv
@@ -120,11 +120,11 @@ function copy --description "Copy pipe or argument"
     xclip -sel clip
   else
     printf "$argv" | xclip -sel clip
-  end    
+  end
 end
 
 #
-# Fzf stuff 
+# Fzf stuff
 # https://github.com/junegunn/fzf
 # https://github.com/junegunn/fzf/blob/master/man/man1/fzf.1
 #
@@ -147,7 +147,7 @@ function search --description "Search files by mask, case insensitive, output wi
     find $PWD 2>/dev/null | fzf -q "'" | read -l result; and commandline -a $result
   else
     find $PWD -iname $argv 2>/dev/null  | fzf
-  end    
+  end
 end
 
 function search-contents --description "Search file contents"
@@ -198,7 +198,7 @@ function nano
     touch "$argv" 2>/dev/null
   end
 
-  if test -w "$argv"    
+  if test -w "$argv"
     /bin/nano -mui $argv
   else
     echo "Editing $argv requires root permission"
@@ -258,7 +258,7 @@ reconmail.com" | shuf -n1)
   set email (curl -s www.pseudorandom.name | string replace ' ' '')@$domain
   printf "$email" | tee /dev/tty | xclip -sel clip
   echo -e "\ncopied to clipboard\nhttps://www.mailinator.com/inbox2.jsp?public_to=$email"
-end 
+end
 
 function random-password --description "Generate random password" --argument-names 'length'
   test -n "$length"; or set length 13
@@ -276,7 +276,7 @@ function xsh --description "Prepend this to command to explain its syntax i.e. `
 end
 
 function transfer --description "Upload file to transfer.sh"
-  curl --progress-bar --upload-file $argv https://transfer.sh/(basename $argv)   
+  curl --progress-bar --upload-file $argv https://transfer.sh/(basename $argv)
 end
 
 # https://github.com/dmi3/bin/blob/master/yandex-translate.sh
@@ -289,7 +289,7 @@ function freq --description "Line frequency in piped input"
   cat 1>| sort -f | uniq -c | sort -k 1nr -k 2f
 end
 
-function rangr 
+function rangr
   rm /tmp/rangr 2> /dev/null; or true
 
   ranger
@@ -325,4 +325,4 @@ set fish_color_cwd 66D9EF # the color used for the current working directory in 
 
 #My additions
 # Alias for idea
-alias idea='/opt/idea-IC-183.4284.148/bin/idea.sh &'
+alias idea='/opt/idea-IC-202.7660.26/bin/idea.sh &'
