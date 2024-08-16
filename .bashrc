@@ -15,14 +15,20 @@ function marks {
 
 # Additions to Classpath
 #JAVA_HOME=/usr/lib/jvm/java-15-oracle/
-#JAVA_HOME=/usr/lib/jvm/java-11-oracle/
-JAVA_HOME=/usr/lib/jvm/java-8-oracle/
-#JAVA_HOME=/usr/lib/jvm/java-17-oracle/
+#JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+#JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+JAVA_HOME=/usr/lib/jvm/java-17-oracle/
 PATH=$PATH:$JAVA_HOME
 MY_SCRIPTS=/home/ethomev/Work/gitrepos/myScripts/
 PATH=$PATH:$MY_SCRIPTS
-GO_HOME=/usr/local/go/bin
+GO_HOME=/usr/local/go/bin/
 PATH=$PATH:$GO_HOME
+
+BOB=/home/ethomev/repos/bob
+PATH=$PATH:$BOB
+
+MVND_HOME=/home/ethomev/mvnd/maven-mvnd-1.0.0-m1-linux-amd64/bin
+PATH=$PATH:$MVND_HOME
 
 # GO Setup
 ## execute go from anywhere
@@ -37,7 +43,7 @@ export PATH="/home/ethomev/.linuxbrew/bin:$PATH"
 # This file updates the prompt when in a git repo
 PATH_TO_GIT_COMPLETION=/home/ethomev/Work/gitrepos/git/contrib/completion
 [[ -f "$PATH_TO_GIT_COMPLETION/.git_prompt.sh" ]] && source "$PATH_TO_GIT_COMPLETION/.git_prompt.sh"
-export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+# export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 
 # allow moving forward in interactive search
 stty -ixon

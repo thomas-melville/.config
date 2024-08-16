@@ -50,7 +50,7 @@ end
 function fish_prompt
     set_color 777 --bold
 
-    set __git_branch (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+    set __git_branch (git symbolic-ref HEAD 2>/dev/null | sed -e 's|^refs/heads/||')
 
     # Full path + git trimmed to width of terminal
     set prompt_width (math (pwd | string length) + (string length "$__git_branch") + 7)
