@@ -21,10 +21,10 @@ JAVA_HOME=/usr/lib/jvm/java-17-oracle/
 PATH=$PATH:$JAVA_HOME
 MY_SCRIPTS=/home/ethomev/Work/gitrepos/myScripts/
 PATH=$PATH:$MY_SCRIPTS
-GO_HOME=/usr/local/go/bin/
-PATH=$PATH:$GO_HOME
+# GO_HOME=/usr/local/go/bin/
+# PATH=$PATH:$GO_HOME
 
-BOB=/home/ethomev/repos/bob
+BOB=/home/ethomev/repos/adp/bob
 PATH=$PATH:$BOB
 
 MVND_HOME=/home/ethomev/mvnd/maven-mvnd-1.0.0-m1-linux-amd64/bin
@@ -35,8 +35,8 @@ PATH=$PATH:$MVND_HOME
 #GO_HOME=/usr/local/go/bin
 #PATH=$PATH:$GO_HOME
 ## execute compiled go commands from anywhere
-#GOPATH=$(go env GOPATH)
-#PATH=$PATH:$GOPATH/bin
+# GOPATH=$(go env GOPATH)
+PATH=$PATH:/home/ethomev/go/bin
 
 export PATH="/home/ethomev/.linuxbrew/bin:$PATH"
 

@@ -43,3 +43,5 @@
 [rebase]
     # give more information when you do a rebase. This is apparently costly, turn it off if it annoys me
     stat = true
+[commit]
+    template = /home/ethomev/.config/git/commit.template
