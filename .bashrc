@@ -17,7 +17,8 @@ function marks {
 #JAVA_HOME=/usr/lib/jvm/java-15-oracle/
 #JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 #JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
-JAVA_HOME=/usr/lib/jvm/java-17-oracle/
+#JAVA_HOME=/usr/lib/jvm/java-17-oracle/
+JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64/
 PATH=$PATH:$JAVA_HOME
 MY_SCRIPTS=/home/ethomev/Work/gitrepos/myScripts/
 PATH=$PATH:$MY_SCRIPTS

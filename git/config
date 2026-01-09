@@ -1,6 +1,7 @@
 [user]
 	email = thomas.melville@ericsson.com
 	name = Thomas Melville
+	signingkey = ED186D6988C926F4
 [url "ssh://gerrit/OSS/com.ericsson.orchestration.mgmt"]
     insteadOf = orch:
 [alias]
@@ -20,7 +21,7 @@
         stash-all = "!f() { git stash save --include-untracked $1; }; f"
 	# push a commit as a review to gerrit. This function also allows you to set the topic. topics are handy if you have multiple commits for a story, and even handier if those commits are across repos.
 	# If an argument is passed to the command it is the topic name, if no argument is passed no topic is set. If pushing a new patch set on a review which already has a topic there is no need to pass the topic everytime
-	review = "!f() { if [ -z $1 ]; then git push origin HEAD:refs/for/master; else git push origin HEAD:refs/for/master%topic=$1; fi; }; f"
+	review = "!f() { if [ -z $1 ]; then git push --signed=yes origin HEAD:refs/for/master; else git push origin HEAD:refs/for/master%topic=$1; fi; }; f"
 	#short git log
     le = log --oneline --decorate
 	#List commits showing changed files
@@ -34,6 +35,7 @@
     #excludesfile = .gitignore
 [push]
 	default = matching
+	gpgsign = true
 [rerere]
     # This means I don't have to do git add when resolving conflicts in a rebase
     autoUpdate = true
@@ -45,3 +47,6 @@
     stat = true
 [commit]
     template = /home/ethomev/.config/git/commit.template
+	gpgsign = true
+[gpg]
+	format = openpgp
