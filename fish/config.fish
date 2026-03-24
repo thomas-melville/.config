@@ -326,3 +326,5 @@ set fish_color_cwd 66D9EF # the color used for the current working directory in 
 #My additions
 # Alias for idea
 alias idea='/opt/idea-IC-202.7660.26/bin/idea.sh &'
+
+string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)

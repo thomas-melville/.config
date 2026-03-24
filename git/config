@@ -1,7 +1,7 @@
 [user]
 	email = thomas.melville@ericsson.com
 	name = Thomas Melville
-	signingkey = ED186D6988C926F4
+	signingkey = 126413D58047D2D0
 [url "ssh://gerrit/OSS/com.ericsson.orchestration.mgmt"]
     insteadOf = orch:
 [alias]

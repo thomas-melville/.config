@@ -39,6 +39,8 @@ PATH=$PATH:$MVND_HOME
 # GOPATH=$(go env GOPATH)
 PATH=$PATH:/home/ethomev/go/bin
 
+KIRA=/home/ethomev/.local/bin/
+PATH=$PATH:$KIRO
 export PATH="/home/ethomev/.linuxbrew/bin:$PATH"
 
 # This file updates the prompt when in a git repo
