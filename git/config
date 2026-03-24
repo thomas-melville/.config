@@ -35,7 +35,7 @@
     #excludesfile = .gitignore
 [push]
 	default = matching
-	gpgsign = true
+	gpgsign = if-asked
 [rerere]
     # This means I don't have to do git add when resolving conflicts in a rebase
     autoUpdate = true
